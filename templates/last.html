@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>房源数据</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>项目名称</th>
+            <th>住宅用房(套数)</th>
+            <th>商业用房(套数)</th>
+            <th>办公用房(套数)</th>
+            <th>其他(套数)</th>
+            <th>价格</th>
+        </tr>
+        <tr>
+            <td>{{ totle.sums.CNTALL }}个楼盘</td>
+            <td>{{ totle.sums.COUNT1 }}</td>
+            <td>{{ totle.sums.COUNT2 }}</td>
+            <td>{{ totle.sums.COUNT3 }}</td>
+            <td>{{ totle.sums.COUNT4 }}</td>
+            <td>{{ totle.sums.PRICE1 }}</td>
+
+        </tr>
+        {% for data in datas %}
+        <tr>
+            <td>{{ data.NAME}}</td>
+            <td>{{ data.COUNT1}}</td>
+            <td>{{ data.COUNT2}}</td>
+            <td>{{ data.COUNT3}}</td>
+            <td>{{ data.COUNT4}}</td>
+            <td>{{ data.PRICE1 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
